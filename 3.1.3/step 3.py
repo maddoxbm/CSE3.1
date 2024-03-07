@@ -20,11 +20,40 @@ else:
 
 beverage_choice = ""
 beverage_price = ""
-print("Would you like to add a beverage?")
+
 beverage_choice = input("Do you wish to add a beverage: ")
 if beverage_choice == "yes":
-    print
+    beverage_choice = input("What size: Small $1.00, Medium $1.75, Large $2.25")
+    if beverage_choice == "Small":
+        print("You chose small, which will be $1.00")
+        subtotal += 1.00
+    elif beverage_choice == "Medium":
+        print("You chose Medium, which will be $1.75")
+        subtotal += 1.75
+    else:
+        print("You chose Large, which will be $2.25")
+        subtotal += 2.25
+
+# Fries go here
+fries_choice = ""
+print("Would you like to add fries with your order?")
+fries_choice = input("")
+if fries_choice == "yes":
+    print("What size of fries would you like?")
+    print("Small $1.00, Medium $1.50, Large $2.00)")
+    fries_choice = input("Which size of fries would you like?")
+    if fries_choice == "Small":
+        print("Would you like to mega size your fries?")
+        fries_choice = input("")
+
+    elif fries_choice == "Medium":
+        print("You chose Medium, which will be $1.50")
+        subtotal += 1.50
+    else:
+        print("You chose Large, which will be $2.00")
+        subtotal += 2.00
 
 
 
-
+print("Your total will be")
+print(subtotal)
