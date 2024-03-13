@@ -8,14 +8,19 @@ print("Chicken $5.25, beef $6.25, tofu $5.75")
 sandwhich_type = input("Sandwhich Choice: ")
 
 # Calculating sandwhich type
+order = []
+
 if sandwhich_type == "chicken":
     print("You chose chicken, which will be $5.25")
+    order.append("chicken")
     subtotal += 5.25
 elif sandwhich_type == "tofu":
     print("You chose tofu, which will be $5.75")
+    order.append("tofu")
     subtotal += 5.75
 else:
     print("You chose beef, which will be $6.25")
+    order.append("beef")
     subtotal += 6.25
 
 beverage_choice = ""
@@ -26,12 +31,15 @@ if beverage_choice == "yes":
     beverage_choice = input("What size: Small $1.00, Medium $1.75, Large $2.25")
     if beverage_choice == "Small":
         print("You chose small, which will be $1.00")
+        order.append("Small")
         subtotal += 1.00
     elif beverage_choice == "Medium":
         print("You chose Medium, which will be $1.75")
+        order.append("Medium")
         subtotal += 1.75
     else:
         print("You chose Large, which will be $2.25")
+        order.append("Large")
         subtotal += 2.25
 
 # Fries go here
@@ -48,9 +56,11 @@ if fries_choice == "yes":
 
     elif fries_choice == "Medium":
         print("You chose Medium, which will be $1.50")
+        order.append("Medium")
         subtotal += 1.50
     else:
         print("You chose Large, which will be $2.00")
+        order.append("Large")
         subtotal += 2.00
 
 
