@@ -9,3 +9,8 @@ class Dog:
         self.fur = fur
         self.legs = num_of_legs
         self.fur_color = fur_color
+
+
+
+    def __str__(self):
+        return "fur: " + fur + "legs: " + self.legs + "fur color: " + fur_color
